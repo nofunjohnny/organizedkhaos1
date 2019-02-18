@@ -12,7 +12,8 @@ export default class App extends React.Component {
         <View style={styles.sales}>
           <Button
             buttonStyle={{
-              marginTop: 75,
+              marginTop: 20,
+              marginBottom: 20,
               backgroundColor: "black",
               borderWidth: 2,
               borderColor: "white",
@@ -33,16 +34,17 @@ export default class App extends React.Component {
             onPress={() => call(args).catch(console.error)}
           />
         </View>
-        <View style={styles.sales}>
+        <View style={styles.row}>
           <Button
             buttonStyle={{
               backgroundColor: "black",
               borderWidth: 2,
               borderColor: "white",
               borderRadius: 30,
-              height: 80
+              height: 128,
+              width: 128
             }}
-            containerStyle={{ marginVertical: 1, height: 150, width: 250 }}
+            
             titleStyle={{ fontWeight: "bold" }}
             ViewComponent={LinearGradient}
             linearGradientProps={{
@@ -56,16 +58,17 @@ export default class App extends React.Component {
             color="black"
           />
         </View>
-        <View style={styles.sales}>
+        <View style={styles.row}>
           <Button
             buttonStyle={{
               backgroundColor: "black",
               borderWidth: 2,
               borderColor: "white",
               borderRadius: 30,
-              height: 80
+              height: 128,
+              width: 128
             }}
-            containerStyle={{ marginVertical: 1, height: 150, width: 250 }}
+            
             titleStyle={{ fontWeight: "bold" }}
             ViewComponent={LinearGradient}
             linearGradientProps={{
@@ -73,22 +76,23 @@ export default class App extends React.Component {
               start: { x: 0, y: 0.5 },
               end: { x: 1, y: 0.5 }
             }}
-            icon={<Icon name="person" size={35} color="black" />}
+            icon={<Icon name="person" size={15} color="black" />}
             title="Rentals"
             type="solid"
             color="black"
           />
         </View>
-        <View style={styles.sales}>
+        <View style={[styles.rowtwo, styles.row]}>
           <Button
             buttonStyle={{
               backgroundColor: "black",
               borderWidth: 2,
               borderColor: "white",
               borderRadius: 30,
-              height: 80
+              height: 128,
+              width: 128
             }}
-            containerStyle={{ marginVertical: 1, height: 150, width: 250 }}
+            
             titleStyle={{ fontWeight: "bold" }}
             ViewComponent={LinearGradient}
             linearGradientProps={{
@@ -96,22 +100,23 @@ export default class App extends React.Component {
               start: { x: 0, y: 0.5 },
               end: { x: 1, y: 0.5 }
             }}
-            icon={<Icon name="person" size={35} color="black" />}
+            icon={<Icon name="person" size={15} color="black" />}
             title="Heat Load"
             type="solid"
             color="black"
           />
         </View>
-        <View style={styles.sales}>
+        <View style={styles.rowtwo}>
           <Button
             buttonStyle={{
               backgroundColor: "black",
               borderWidth: 2,
               borderColor: "white",
               borderRadius: 30,
-              height: 80
+              height: 128,
+              width: 128
             }}
-            containerStyle={{ marginVertical: 1, height: 150, width: 250 }}
+            
             titleStyle={{ fontWeight: "bold" }}
             ViewComponent={LinearGradient}
             linearGradientProps={{
@@ -119,8 +124,8 @@ export default class App extends React.Component {
               start: { x: 0, y: 0.5 },
               end: { x: 1, y: 0.5 }
             }}
-            icon={<Icon name="person" size={35} color="black" />}
-            title="Location"
+            icon={<Icon name="person" size={15} color="black" />}
+            title="Sales"
             type="solid"
             color="black"
           />
@@ -137,15 +142,24 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "grey"
   },
-  button: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "space-evenly"
-    
-  },
   sales: {
+    flexDirection: "row"
+  },
+  row: {
+    flex: 1,
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    justifyContent: "flex-end",
+    margin: 2,
+    alignItems: "center",
+    marginTop: 20
+  },
+  rowtwo: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
+    margin: 2,
+    alignItems: "center",
+    marginTop: 20
     
   }
 });
